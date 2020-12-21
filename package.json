@@ -1,0 +1,22 @@
+{
+  "name": "electron-ocr",
+  "version": "0.1.0",
+  "description": "Custom app with GUI for tire inscriptions OCR",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^11.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "caman": "^4.1.2",
+    "nan": "2.14.0",
+    "tesseract.js": "2.1.3"
+  }
+}

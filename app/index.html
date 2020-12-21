@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="script-src 'self' 'unsafe-inline';" http-equiv="Content-Security-Policy"/>
+
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <title>Application d'OCR pour pneus</title>
+</head>
+<body>
+<div class="container container-fluid">
+    <h1>Application OCR</h1>
+    <div class="jumbotron">
+        <p>
+            We are using node
+            <script>document.write(process.versions.node)</script>
+            ,
+            Chrome
+            <script>document.write(process.versions.chrome)</script>
+            ,
+            and Electron
+            <script>document.write(process.versions.electron)</script>
+            .
+        </p>
+    </div>
+
+    <button class="btn btn-primary my-2" id="select-images">Ouvrir images</button>
+    <div id="image_container"></div>
+
+    <button class="btn btn-primary my-2" id="process-image">OCR image</button>
+</div>
+
+<script>
+    require('./renderer/renderer-process')
+</script>
+
+</body>
+</html>
