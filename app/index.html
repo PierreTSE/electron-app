@@ -7,31 +7,46 @@
     <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
     <title>Application d'OCR pour pneus</title>
+
+    <style>
+        .hoverable:hover .popup {
+            display: block;
+        }
+
+        .popup {
+            display: none;
+            position: absolute;
+            background-color: lightgray;
+            font-size: 1.5rem;
+            margin-left: 20px;
+            margin-top: 5px;
+            z-index: 9999;
+        }
+    </style>
+
 </head>
 <body>
 <div class="container container-fluid">
     <h1>Application OCR</h1>
+
     <div class="jumbotron">
-        <p>
-            We are using node
-            <script>document.write(process.versions.node)</script>
-            ,
-            Chrome
-            <script>document.write(process.versions.chrome)</script>
-            ,
-            and Electron
-            <script>document.write(process.versions.electron)</script>
-            .
-        </p>
+        <!--        <button class="btn btn-primary my-2" id="select-images">Ouvrir images</button>-->
+        <!--        <div id="selected-image-container" class="hoverable">-->
+        <!--            <span id="popup-1" class="popup">Test Popup</span>-->
+        <!--            <img id="selected-image" src="" alt="Selected image" style='max-width:100%;max-height:100vh;margin:auto;display: none;'>-->
+        <!--        </div>-->
+
+        <button class="btn btn-primary my-2" id="process-image">OCR image</button>
     </div>
 
-    <button class="btn btn-primary my-2" id="select-images">Ouvrir images</button>
-    <div id="image_container"></div>
-
-    <button class="btn btn-primary my-2" id="process-image">OCR image</button>
+    <div class="hoverable" id="processed-image-container">
+        <span class="popup" id="popup-2">Popup</span>
+        <img alt="Image OCR" id="processed-image" src="" style="display: none;">
+    </div>
 </div>
 
 <script>
+    // require('./renderer/selection-process')
     require('./renderer/renderer-process')
 </script>
 
