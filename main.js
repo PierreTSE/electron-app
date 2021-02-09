@@ -24,9 +24,6 @@ function initialize() {
         // mainWindow.loadFile('./app/index.html')
         mainWindow.loadFile('./app/index.html')
 
-        // todo enlever
-        mainWindow.webContents.openDevTools()
-
         mainWindow.on('closed', () => {
             mainWindow = null
         })

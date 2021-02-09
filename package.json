@@ -15,8 +15,6 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "caman": "^4.1.2",
-    "nan": "2.14.0",
     "tesseract.js": "2.1.3"
   }
 }
